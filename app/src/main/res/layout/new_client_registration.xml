@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="391dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/footer" >
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="@string/new_client_registration"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/staff_id"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_staffID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facility_id"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_facilityID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_mode"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/spinner_regMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_motechID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/motech_id"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_motechID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reg_date"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_regDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:onClick="onClickDatePopup" />
+
+            <ImageView
+                android:id="@+id/imageView_regDate"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_calender" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/client_type"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/spinner_clientType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sex"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/apptheme_btn_radio_holo_light"
+                    android:checked="true"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/apptheme_btn_radio_holo_light"
+                    android:text="@string/female" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_firstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/middle_name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_middleName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_lastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/editText_dob"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:onClick="onClickDatePopup" />
+
+            <ImageView
+                android:id="@+id/imageView_dob"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_calender" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estimated_dob"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_estimatedDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radio_exact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/apptheme_btn_radio_holo_light"
+                    android:checked="true"
+                    android:text="@string/exact_dob" />
+
+                <RadioButton
+                    android:id="@+id/radio_estimated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/apptheme_btn_radio_holo_light"
+                    android:text="@string/estimated" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/insured"
+                android:textColor="@color/Peach"
+                android:textStyle="italic" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_insured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/radio_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/apptheme_btn_radio_holo_light"
+                    android:text="@string/yes" />
+
+                <RadioButton
+                    android:id="@+id/radio_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/apptheme_btn_radio_holo_light"
+                    android:checked="true"
+                    android:text="@string/no" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_insured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nhis_number"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/editText_nhisNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nhis_expiry_date"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/editText_nhisExpiryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:onClick="onClickDatePopup" />
+
+                <ImageView
+                    android:id="@+id/imageView_nhisExpiryDate"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_calender" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_addCareHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:id="@+id/tableRow33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mother&apos;s Motech ID"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_mothersMotechId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CWC Serial No:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_cwcSerialNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add care history?"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                 <RadioGroup
+                        android:id="@+id/radioGroup_careHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_careHistoryYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="false"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/radiocareHistoryNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="@string/no" />
+                       
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_careHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_vitA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start|end"
+                    android:onClick="onCheckBoxClicked"
+                    android:text="Vita A"
+                    android:textColor="@color/Peach"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_vitA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Vitamin A:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_vitA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_blue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="Blue" />
+
+                        <RadioButton
+                            android:id="@+id/radio_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Red" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Vitamin A Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_vitADate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" >
+
+                    
+                    </EditText>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_IPTi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ITPi"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_IPTi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last IPTi:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_IPTi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_IPTi1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="IPTi 1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_IPTi2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="IPTi 2" />
+
+                        <RadioButton
+                            android:id="@+id/radio_IPTi3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="IPTi 3" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last IPTi Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_IPTi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_bcg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BCG"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_bcg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BCG Date:   "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_bcg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_opv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OPV"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_OPV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last OPV: "
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_OPV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_OPV0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="OPV 0" />
+
+                        <RadioButton
+                            android:id="@+id/radio_OPV1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="OPV 1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_OPV2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="OPV 3" />
+
+                        <RadioButton
+                            android:id="@+id/radio_OPV3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="OPV 3" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last OPV Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_OPV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_penta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penta"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic|bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_penta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Penta:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_penta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_penta1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="Penta 1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_penta2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Penta 2" />
+
+                        <RadioButton
+                            android:id="@+id/radio_penta3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Penta 3" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Penta Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_penta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_measles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Measles"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_measles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Measles:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_measles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_measles1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="Measles 1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_measles2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Measles 2" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Measles Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_measles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_yf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YF"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic|bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_yf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YF Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_yf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_rotavirus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rotavirus"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="bold|italic"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_rotavirus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Rotavirus:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_rotavirus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_rotavirus1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="Rotavirus 1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_rotavirus2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Rotavirus 2" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Rotavirus Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_rotavirus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_pneumococcal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pneumococcal"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic|bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_pneumococcal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Pneumococcal:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_pneumo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_pneumo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="Pneumo 1" />
+
+                        <RadioButton
+                            android:id="@+id/radio_pneumo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Pneumo 2" />
+
+                        <RadioButton
+                            android:id="@+id/radio_pnuemo3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="Pneumo 3" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Pneumo Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_pneumo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_malaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Malaria"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic|bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_malaria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Has treated malaria?"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_malaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_malariaYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/radio_malariaNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="@string/no" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Malaria Treatment Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_malaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_diarrhoea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diarrhoea"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic|bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_diarrhoea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Has treated diarrhoea?"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_diarrhoea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_diarrhoeaYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/radio_diarhoeaNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="@string/no" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diarrhoea Treatment Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_diarrhoea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <CheckBox
+                    android:id="@+id/checkBox_pneumonia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pneumonia"
+                     android:onClick="onCheckBoxClicked"
+                    android:textColor="@color/Peach"
+                    android:textStyle="italic|bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/TableLayout_pneumonia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+
+                <TableRow
+                    android:id="@+id/tableRow29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Has treated pneumonia?"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup_pneumonia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <RadioButton
+                            android:id="@+id/radio_pneumoniaYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:checked="true"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/radio_pneumoniaNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/apptheme_btn_radio_holo_light"
+                            android:text="@string/no" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pneumonia Treatment Date:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/Peach"
+                        android:textStyle="italic"
+                        android:typeface="serif" />
+
+                    <EditText
+                        android:id="@+id/editText_pneumonia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="date" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/region"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+            <Spinner
+                android:id="@+id/spinner_region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/Peach"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/editText_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPostalAddress" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_phone_number"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Peach"
+                android:textStyle="italic"
+                android:typeface="serif" />
+
+            <EditText
+                android:id="@+id/editText_phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/button_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

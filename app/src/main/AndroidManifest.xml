@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.grameenfoundation.mobihealth"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_main"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        
+         <provider
+        android:name="org.grameenfoundation.mobihealth.database.StubProvider"
+        android:authorities="org.grameenfoundation.provider"
+        android:exported="false"
+        android:syncable="true"/>
+        <service
+            android:name="org.grameenfoundation.mobihealth.syncadapter.AuthenticatorService">
+        <intent-filter>
+            <action android:name="android.accounts.AccountAuthenticator"/>
+        </intent-filter>
+        <meta-data
+            android:name="android.accounts.AccountAuthenticator"
+            android:resource="@xml/authenticator" />
+    </service>
+        <service
+                android:name="org.grameenfoundation.mobihealth.syncadapter.SyncService"
+                android:exported="true"
+                android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+                    android:resource="@xml/syncadapter" />
+        </service>
+   
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.MenuActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.PregnancyMenuActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.SecondTrimesterActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterNutritionAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterNormalSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterMalariaAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterMedicineAwarenessAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.FirstTrimesterDangerSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.SecondTrimesterBirthPreparednessAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.SecondTrimesterWarningSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.SecondTrimesterMalariaAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.SecondTrimesterNutritionAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.SecondTrimesterHygieneAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterANCAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterBreastfeedingAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterNormalSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterLaborSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterPNCAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterFonatelleAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterWarningSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ThirdTrimesterHandWashingAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareMenu"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCarePneumoniaAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareDangerSignsAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareFamilyPlanningAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCarePNCAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareImmunizationAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareMalariaAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareInfantCareAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareNutritionAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCarePersonalCareAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.ChildCareDiarhoeaAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.YouthHealthMenuActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.YouthHealthAbstinenceAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.YouthHealthRapeAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.YouthHealthTeenagePregnancyAudioGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.VisualAidsGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.VisualAidsMenuActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.VisualAidsGalleryView"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.AlertMessagesActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.settings.LanguageSettingsActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.LoginActivity"></activity>
+        <service android:name="org.grameenfoundation.mobihealth.activity.CustomSyncService"></service>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.NewPatientRegistrationActivity"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.VisualAidsViewPager">
+
+            
+        </activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.VisualAidsVideoGallery"></activity>
+        <activity android:name="org.grameenfoundation.mobihealth.activity.AudioGalleryActivity"></activity>
+         <activity android:name="org.grameenfoundation.mobihealth.application.URLMediaPlayerActivity"></activity>
+    </application>
+
+</manifest>
+
